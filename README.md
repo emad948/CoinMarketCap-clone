@@ -1,7 +1,7 @@
 # CoinMarketCap-clone
 
 
-![](DEMO:JPG)
+![](DEMO.JPG)
 
 
 
