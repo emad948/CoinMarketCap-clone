@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Coin from './Coin';
 import './App.css'
 
+
+
 const App=() => {
 
   const [data, setData]=useState([]);
@@ -20,14 +22,20 @@ const App=() => {
         <h1 className="coin-text">Cryptocurrency Prices</h1>
         <br />
         <form >
-          <input className="coin-input" type="text" placeholder="Search" value={input} onChange={(e) => setInput(e.target.value)}></input>
+          <input className="coin-input" type="text" placeholder="Search" value={input} onChange={(e) => setInput(e.target.value)} style={{ color: "black" }}></input>
+
         </form>
+        <button className="clear-btn" onClick={() => { setInput("") }}  > clear</button>
+
+
       </div>
-      {filtered.map((coin) => {
-        return (
-          <Coin key={coin.id} {...coin} />
-        );
-      })}
+      {
+        filtered.map((coin) => {
+          return (
+            <Coin key={coin.id} {...coin} />
+          );
+        })
+      }
 
 
 
